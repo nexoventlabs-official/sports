@@ -2,7 +2,7 @@ export default function PageHeader({ kicker, title, subtitle, bg = '/events/10.p
   return (
     <section
       className="text-white pt-36 pb-20 bg-cover bg-center relative"
-      style={{ backgroundImage: `linear-gradient(120deg,rgba(11,30,63,.7),rgba(18,42,87,.6)),url(${bg})` }}
+      style={{ backgroundImage: `linear-gradient(120deg,rgba(0,0,0,.45),rgba(0,0,0,.35)),url(${bg})` }}
     >
       <div className="relative text-center max-w-[900px] mx-auto px-5">
         {kicker && (
