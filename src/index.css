@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0b1e3f;
+  --color-navy-2: #122a57;
+  --color-accent: #2f9e44;
+  --color-accent-2: #51c466;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+@layer base {
+  body { font-family: var(--font-body); }
+  h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: 0.2px; }
+  a { color: inherit; text-decoration: none; }
+}
+
+/* Gradient text helper */
+.text-gradient {
+  background: linear-gradient(90deg, #a8e6b4, var(--color-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.num-gradient {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-gradient {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+}
