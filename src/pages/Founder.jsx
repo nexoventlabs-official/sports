@@ -7,9 +7,9 @@ export default function Founder() {
 
       <section className="bg-white py-20 md:py-24">
         <div className="max-w-[1200px] mx-auto px-5 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
-          <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-navy to-accent grid place-items-center text-white shadow-[0_10px_30px_rgba(11,30,63,.08)] relative">
-            <div className="text-[120px] opacity-60">🥊</div>
-            <div className="absolute bottom-5 left-5 right-5 bg-black/45 p-3.5 rounded-xl backdrop-blur-md">
+          <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(11,30,63,.08)] relative">
+            <img src="/events/1.png" alt="Visanath Shetty" className="w-full h-full object-cover" />
+            <div className="absolute bottom-5 left-5 right-5 bg-black/45 p-3.5 rounded-xl backdrop-blur-md text-white">
               <strong className="font-heading text-xl block">Visanath Shetty</strong>
               <span className="text-[13px] opacity-80">Founder • National In-charge</span>
             </div>
