@@ -17,7 +17,7 @@ export default function Navbar() {
           <img src="/logo.png" alt="ISYDCI" className="w-10 h-10 rounded-full object-contain" />
           <div className="font-heading font-extrabold text-white text-sm leading-tight whitespace-nowrap">
             ISYDCI
-            <small className="block font-medium text-white/70 text-[10px] tracking-wider">International Sports and Youth Development Campaign of India</small>
+            <small className="hidden sm:block font-medium text-white/70 text-[10px] tracking-wider">International Sports and Youth Development Campaign of India</small>
           </div>
         </Link>
         <div className="hidden md:flex items-center gap-1 ml-auto">
@@ -33,10 +33,13 @@ export default function Navbar() {
             </NavLink>
           ))}
         </div>
-        <button className="md:hidden ml-auto bg-transparent border-0 text-2xl text-white cursor-pointer" onClick={() => setOpen(v => !v)}>☰</button>
+        <button className="md:hidden ml-auto bg-transparent border-0 text-white cursor-pointer w-8 h-8 relative flex flex-col items-center justify-center gap-[5px]" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">
+          <span className={`block w-5 h-[2px] bg-white rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
+          <span className={`block w-5 h-[2px] bg-white rounded transition-all duration-300 ${open ? 'opacity-0 scale-0' : ''}`} />
+          <span className={`block w-5 h-[2px] bg-white rounded transition-all duration-300 ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+        </button>
       </div>
-      {open && (
-        <div className="md:hidden flex flex-col bg-navy border-t border-white/10 p-3">
+      <div className={`md:hidden flex flex-col bg-navy border-t border-white/10 overflow-hidden transition-all duration-300 ${open ? 'max-h-[500px] p-3' : 'max-h-0 p-0'}`}>
           {navLinks.map(l => (
             <NavLink
               key={l.to} to={l.to} end={l.to === '/'}
@@ -48,8 +51,7 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
-        </div>
-      )}
+      </div>
     </nav>
   )
 }
