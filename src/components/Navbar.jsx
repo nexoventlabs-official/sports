@@ -18,7 +18,7 @@ export default function Navbar() {
           <img src="/logo.png" alt="ISYDCI" className="w-12 h-12 rounded-full object-contain" />
           <div className="font-heading font-extrabold text-white leading-tight">
             ISYDCI
-            <small className="block font-medium text-white/70 text-[11.5px] tracking-wider">International Sports & Youth Development</small>
+            <small className="block font-medium text-white/70 text-[11.5px] tracking-wider">International Sports and Youth Development Campaign of India</small>
           </div>
         </Link>
         <div className={`hidden md:flex gap-1.5 flex-wrap ${open ? '!flex flex-col absolute top-full left-0 right-0 bg-navy border-b border-white/10 p-3' : ''}`}>
