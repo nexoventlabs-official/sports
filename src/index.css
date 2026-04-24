@@ -31,3 +31,9 @@
 .btn-gradient {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
 }
+
+/* Shimmer skeleton loader */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
