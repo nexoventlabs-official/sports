@@ -13,6 +13,7 @@ const sportIcon = (s = '') => {
   if (x.includes('athlet') || x.includes('run')) return '🏃'
   if (x.includes('kho')) return '🏃'
   if (x.includes('raider')) return '🤼'
+  if (x.includes('gymnast')) return '🤸'
   return '🏆'
 }
 
@@ -55,6 +56,12 @@ export default function Athletes() {
                           <div className="flex items-start gap-2 text-sm text-slate-600">
                             <span className="w-7 h-7 rounded-full bg-[#f7f2e2] grid place-items-center text-[13px] shrink-0 mt-0.5">🏅</span>
                             <span>{m.medals}</span>
+                          </div>
+                        )}
+                        {m.extra && (
+                          <div className="flex items-start gap-2 text-sm text-slate-600">
+                            <span className="w-7 h-7 rounded-full bg-[#f7f2e2] grid place-items-center text-[13px] shrink-0 mt-0.5">⚡</span>
+                            <span><b className="text-navy">Additional:</b> {m.extra}</span>
                           </div>
                         )}
                       </div>
